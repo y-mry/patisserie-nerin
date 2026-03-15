@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="練馬の商店街にある小さなパティスリー「Nérin(ネラン)」。季節の素材を活かしたケーキと、心ほどける焼き菓子を、一つひとつ丁寧に手づくりしています。贈り物にもぴったりなギフトもご用意しています。">
+    <title>ケーキ一覧 | Pâtisserie Nérin</title>
+    <!-- Faviconの指定 -->
+    <link rel="icon" href="img/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/manifest.webmanifest">
+    <!-- Google Fonts の読み込み-->
+    <link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2abdc1e923.js" crossorigin="anonymous"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <!-- inview -->
+    <script type="text/javascript" src="js/jquery.inview.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body class="subpage cake">
+    <!-- =========================== ヘッダー =========================== -->
+    <header>
+        <div class="menu-all">
+
+            <h1>
+                <a href="index.html" class="logo">
+                    <img src="img/top/logo.svg" alt="">
+                </a>
+            </h1>
+
+            <div class="menu">
+                <nav class="pc-nav">
+                    <ul>
+                        <li><a href="concept.html">コンセプト</a></li>
+                        <li><a href="cake.html">ケーキ</a></li>
+                        <li><a href="whole.html">ホールケーキ</a></li>
+                        <li><a href="baked.html">焼き菓子</a></li>
+                        <li><a href="gift.html">ギフト</a></li>
+                        <li><a href="info.html">店舗情報</a></li>
+                    </ul>
+                </nav>
+
+                <div class="nav-cta">
+                    <a href="reserve.html" class="btn-cta">ご予約案内</a>
+                    <a href="https://www.instagram.com/?hl=ja" class="sns-btn"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <!-- ハンバーガー -->
+                <div class="sp-menu">
+
+                    <div class="hamburger-menu">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+
+                    <nav class="sp-nav">
+                        <ul>
+                            <li><a href="concept.html">コンセプト</a></li>
+                            <li><a href="cake.html">ケーキ</a></li>
+                            <li><a href="whole.html">ホールケーキ</a></li>
+                            <li><a href="baked.html">焼き菓子</a></li>
+                            <li><a href="gift.html">ギフト</a></li>
+                            <li><a href="info.html">店舗情報</a></li>
+                            <li><a href="https://www.instagram.com/?hl=ja" class="sns-btn"><i
+                                        class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- =========================== メイン =========================== -->
+    <main>
+
+        <section class="sub_main_img">
+            <img src="img/cake/cakes_main_img.jpg" alt="">
+        </section>
+
+        <!-- =========================== ケーキ一覧 =========================== -->
+        <section id="cakes" class="cakes">
+            <div class="container">
+                <div class="cakes-title">
+                    <h2>
+                        ケーキ一覧
+                    </h2>
+                </div>
+
+                <div class="text">
+                    <p>当店はプチガトーの事前ご予約が可能です。詳しくはご予約案内をご覧ください。</p>
+                    <p><a href="reserve.html">ご予約案内はこちら →</a></p>
+                </div>
+
+                <div class="card-list">
+
+                    <div class="card">
+                        <img class="show fade-only" src="img/cake/short_cake.jpg" alt="">
+                        <div class="card-text">
+                            <h3>ショートケーキ</h3>
+                            <p class="description">北海道産生クリームと苺を重ねた、軽やかな口どけの王道ショートケーキ。</p>
+                            <p class="price">¥620</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="show fade-only" src="img/cake/opera.jpg" alt="">
+                        <div class="card-text">
+                            <h3>オペラ</h3>
+                            <p class="description">コーヒークリームとビターなチョコレートを幾層にも重ねた、濃厚な味わいのクラシックケーキ。</p>
+                            <p class="price">¥680</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="show fade-only" src="img/cake/marron.jpg" alt="">
+                        <div class="card-text">
+                            <h3>モンブラン</h3>
+                            <p class="description">和栗のクリームをたっぷり絞り、軽やかな生クリームとメレンゲを忍ばせたモンブラン。</p>
+                            <p class="price">¥720</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="show fade-only" src="img/cake/cheese_cake.jpg" alt="">
+                        <div class="card-text">
+                            <h3>ベイクドチーズケーキ</h3>
+                            <p class="description">クリームチーズのコクとほのかな酸味を楽しめる、しっとり焼き上げたチーズケーキ。</p>
+                            <p class="price">¥560</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="show fade-only" src="img/cake/fruits_cake.jpg" alt="">
+                        <div class="card-text">
+                            <h3>タルト・フリュイ</h3>
+                            <p class="description">カスタードクリームとサクサクのタルトに、フルーツを彩りよく飾った贅沢な一品。</p>
+                            <p class="price">¥680</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="show fade-only" src="img/cake/millefeuille.jpg" alt="">
+                        <div class="card-text">
+                            <h3>苺のミルフィーユ</h3>
+                            <p class="description">香ばしく焼き上げたパイと軽やかなカスタードクリーム、苺の酸味が重なるミルフィーユ。</p>
+                            <p class="price">¥650</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h2 class="sub-menu">季節限定ケーキ</h2>
+
+                <div class="card-list">
+
+                    <div class="card">
+                        <img class="show fade-only" src="img/cake/ichijiku.jpg" alt="">
+                        <div class="card-text">
+                            <h3>いちじくパイ</h3>
+                            <p class="description">旬のいちじくを贅沢にのせ、アーモンドクリームとカスタードで仕上げた季節限定のケーキ。</p>
+                            <p class="price">¥720</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="show fade-only" src="img/cake/muscat.jpg" alt="">
+                        <div class="card-text">
+                            <h3>シャインマスカットのタルト</h3>
+                            <p class="description">瑞々しいシャインマスカットをたっぷりのせた、爽やかな甘さの季節限定タルト。</p>
+                            <p class="price">¥780</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="show fade-only" src="img/cake/peach_cake.jpg" alt="">
+                        <div class="card-text">
+                            <h3>桃のショートケーキ</h3>
+                            <p class="description">みずみずしい白桃と軽やかな生クリームを重ねた、夏限定のやさしい甘さのショートケーキ。</p>
+                            <p class="price">¥720</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="links">
+                    <a href="whole.html">ホールケーキを見る<i class="fa-solid fa-caret-right"></i></a>
+                    <a href="baked.html">焼き菓子を見る<i class="fa-solid fa-caret-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="white-curve"></div>
+        <div class="footer-content">
+            <div class="logo">
+                <a href=""><img src="img/top/logo.svg" alt="Pâtisserie Nérin"></a>
+                <p class="copy">&copy; 2026 Pâtisserie Nérin. All rights reserved.</p>
+                <p class="notes">※本サイトはポートフォリオ用に自主制作した架空のWebサイトです。</p>
+            </div>
+            <ul>
+                <li><a href="concept.html">コンセプト</a></li>
+                <li><a href="cake.html">ケーキ</a></li>
+                <li><a href="whole.html">ホールケーキ</a></li>
+                <li><a href="baked.html">焼き菓子</a></li>
+                <li><a href="gift.html">ギフト</a></li>
+                <li><a href="info.html">店舗情報</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script>
+    //　swiper
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        speed: 1000,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+    });
+    //　inview
+    $(function () {
+        $(".show").on("inview", function (event, isInview) {
+            if (isInview) {
+                $(this).addClass("fade-in");
+            } else {
+                $(this).removeClass("fade-in");
+            }
+        });
+    });
+    // ハンバーガーメニュー
+    document.querySelectorAll('.hamburger-menu').forEach(function (menu) {
+        menu.addEventListener('click', function () {
+            this.classList.toggle('active');
+            const navMenu = this.parentElement.querySelector('.sp-nav');
+            if (navMenu) {
+                navMenu.classList.toggle('active');
+            }
+            document.body.classList.toggle('drawer-open');
+        });
+    });
+</script>
+
+</html>
