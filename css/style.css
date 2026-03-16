@@ -877,6 +877,111 @@ body {
     }
 }
 
+/* ================ concept ================ */
+body.concept {
+    main {
+        .concept-title {
+            position: relative;
+            background-image: url("../img/concept/concept.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: 60px;
+            height: clamp(50px, 7vw, 72px);
+            background-size: contain;
+
+            h2 {
+                position: absolute;
+                left: 50%;
+                bottom: 80%;
+                transform: translate(-50%, 150%);
+            }
+        }
+
+        #concept {
+            >.container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                align-items: center;
+                padding-top: 100px;
+                grid-template-areas: "text image";
+
+                .text {
+                    grid-area: text;
+                }
+
+                .image {
+                    grid-area: image;
+                    margin-right: -9.5vw;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 50px 0 0 50px;
+                    }
+                }
+
+                &.reverse {
+                    grid-template-areas: "image text";
+
+                    .image {
+                        margin-right: 0;
+                        margin-left: -9.5vw;
+
+                        img {
+                            border-radius: 0 50px 50px 0;
+                        }
+                    }
+
+                    .text {
+                        padding-left: 60px;
+                    }
+                }
+            }
+
+            .photo {
+                margin-top: 100px;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0;
+
+                img {
+                    width: 100%;
+                    aspect-ratio: 1 / 1.6;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+
+            .links {
+                margin-top: 100px;
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                white-space: nowrap;
+
+                a {
+                    width: clamp(220px, 30vw, 420px);
+                    padding: 22px 20px;
+                    border-radius: 100px;
+                    border: 1px solid var(--btn);
+                    color: var(--btn);
+                    text-align: center;
+
+                    i {
+                        transition: transform 0.3s ease;
+                    }
+
+                    &:hover i {
+                        transform: translateX(6px);
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* ================ cakes ================ */
 body.cake {
     main {
@@ -1560,7 +1665,67 @@ body.info {
             }
         }
     }
+
+    body.concept {
+        main {
+            #concept {
+                >.container {
+                    gap: 20px;
+                    padding-top: 50px;
+                    grid-template-columns: 1fr;
+                    grid-template-areas:
+                        "image"
+                        "text";
+
+                    .image {
+                        img {
+                            border-radius: 50px;
+                        }
+                    }
+
+                    .text {
+                        .lead {
+                            margin: 0;
+                        }
+                    }
+
+                    &.reverse {
+                        gap: 20px;
+                        padding-top: 0;
+                        grid-template-columns: 1fr;
+                        grid-template-areas:
+                            "image"
+                            "text";
+
+                        .image {
+                            margin-left: 0;
+
+                            img {
+                                border-radius: 50px;
+                            }
+
+                        }
+
+                        .text {
+                            padding-left: 0px;
+                        }
+                    }
+                }
+
+                .photo {
+                    margin: 80px 0 100px 0;
+
+                    img {
+                        aspect-ratio: 1 / 2;
+                    }
+                }
+            }
+        }
+    }
 }
+
+
+
 
 @media (width <=600px) {
 
@@ -1807,6 +1972,66 @@ body.info {
 
                 h2 {
                     font-size: 22px;
+                }
+            }
+        }
+    }
+
+    /* ================ concept ================ */
+    body.concept {
+        main {
+            .concept-title {
+                margin-top: 30px;
+            }
+
+            #concept {
+                >.container {
+                    gap: 10px;
+                    padding-top: 40px;
+
+                    .image {
+                        img {
+                            border-radius: 30px;
+                        }
+                    }
+
+                    .text {
+                        text-align: left;
+
+                        .lead {
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    &.reverse {
+                        gap: 10px;
+
+                        .image {
+                            img {
+                                border-radius: 30px;
+                            }
+
+                        }
+
+                        .text {
+                            padding-left: 0px;
+                        }
+                    }
+                }
+
+                .photo {
+                    grid-template-columns: repeat(2, 1fr);
+                    margin: 40px 0 50px 0;
+
+                    img {
+                        aspect-ratio: 1 / 1;
+
+
+                    }
+                }
+
+                .links {
+                    margin-top: 80px;
                 }
             }
         }

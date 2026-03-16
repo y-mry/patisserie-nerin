@@ -111,7 +111,7 @@
       </div>
     </section>
     <!-- =========================== コンセプト =========================== -->
-    <section id="concept" class="concept">
+    <section class="concept">
       <div class="container">
 
         <div class="concept-title">
@@ -136,7 +136,7 @@
       </div>
     </section>
     <!-- =========================== ラインナップ =========================== -->
-    <section id="lineup" class="lineup">
+    <section class="lineup">
       <div class="lineup-title">
         <h2>
           ラインナップ
@@ -182,7 +182,7 @@
       </div>
     </section>
     <!-- =========================== 予約について =========================== -->
-    <section id="reserve" class="reserve">
+    <section class="reserve">
       <div class="container">
         <div class="reserve-title">
           <h2>
@@ -203,7 +203,7 @@
       </div>
     </section>
     <!-- =========================== インスタグラム =========================== -->
-    <section id="instagram" class="instagram">
+    <section class="instagram">
       <div class="container">
         <div class="instagram-title">
           <h2>
@@ -226,7 +226,7 @@
       </div>
     </section>
     <!-- =========================== 店舗情報 =========================== -->
-    <section id="shopinfo" class="shopinfo">
+    <section class="shopinfo">
       <div class="container">
         <div class="shopinfo-title">
           <h2>
@@ -303,8 +303,6 @@
     $(".show").on("inview", function (event, isInview) {
       if (isInview) {
         $(this).addClass("fade-in");
-      } else {
-        $(this).removeClass("fade-in");
       }
     });
   });

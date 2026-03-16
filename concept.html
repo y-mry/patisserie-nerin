@@ -92,11 +92,68 @@
     <main>
 
         <section class="sub_main_img">
-            <img src="img/whole/whole_main_img.jpg" alt="">
+            <img src="img/concept/concept_main_img.jpg" alt="">
         </section>
 
         <!-- ===========================  =========================== -->
-
+        <div class="concept-title">
+            <h2>
+                コンセプト
+            </h2>
+        </div>
+        <section id="concept" class="concept">
+            <div class="container">
+                <div class="image">
+                    <img class="show from-right" src="img/concept/aboutas.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p class="lead">毎日の中に、<br>少しだけ特別なひとときを。</p>
+                    <p>練馬の商店街にある小さなパティスリー「Nérin(ネラン)」。</p>
+                    <p>フランス菓子のやさしさと季節の素材を大切に、</p>
+                    <p>ひとつひとつ丁寧にお菓子を作っています。</p>
+                    <p>忙しい日常の中で、ふと心がほどけるような時間。</p>
+                    <p>そんなひとときをお届けできるお店でありたいと考えています。</p>
+                    <p>ご褒美にも、贈り物にも、</p>
+                    <p>日常にそっと寄り添うお菓子を。</p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="img/concept/flesh.jpg" alt="">
+                <img src="img/concept/flour.jpg" alt="">
+                <img src="img/concept/handmade.jpg" alt="">
+                <img src="img/concept/details.jpg" alt="">
+            </div>
+            <div class="container reverse">
+                <div class="image">
+                    <img class="show from-left" src="img/concept/material.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p class="lead">季節の素材を大切に。</p>
+                    <p>Nérinでは、その季節にいちばんおいしい素材を選び、</p>
+                    <p>シンプルでやさしい味わいのお菓子を作っています。</p>
+                    <p>フルーツの香り、クリームの軽さ、焼き菓子の香ばしさ。</p>
+                    <p>素材の魅力が自然に感じられるよう、</p>
+                    <p>ひとつひとつ丁寧に仕上げています。</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="image">
+                    <img class="show from-right" src="img/concept/chef.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p class="lead">ひとつひとつ丁寧に、<br>シェフの手で。</p>
+                    <p>本場フランスのパティスリーで経験を積んだシェフが、</p>
+                    <p>地元である練馬に開いた小さなお店。</p>
+                    <p>伝統的なフランス菓子の技術をベースに、</p>
+                    <p>素材の魅力を大切にしたお菓子づくりを続けています。</p>
+                    <p>本場の味わいを、もっと気軽に。</p>
+                    <p>そんな想いから生まれたパティスリーです。</p>
+                </div>
+            </div>
+            <div class="links">
+                <a href="whole.html">ケーキ一覧を見る<i class="fa-solid fa-caret-right"></i></a>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -137,8 +194,6 @@
         $(".show").on("inview", function (event, isInview) {
             if (isInview) {
                 $(this).addClass("fade-in");
-            } else {
-                $(this).removeClass("fade-in");
             }
         });
     });
