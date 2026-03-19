@@ -10,6 +10,10 @@
     --white: #FFFFFF;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     overflow-x: hidden;
@@ -580,7 +584,7 @@ body {
         }
 
         /* ================ ご予約について ================ */
-        .reserve {
+        .reserve-top {
             .container {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -593,7 +597,7 @@ body {
                     "image text"
                     "image btn";
 
-                .reserve-title {
+                .reserve-top-title {
                     grid-area: title;
                     position: relative;
                     background-image: url("../img/top/reservation.png");
@@ -877,7 +881,7 @@ body {
     }
 }
 
-/* ================ concept ================ */
+/* ================ コンセプト ================ */
 body.concept {
     main {
         .concept-title {
@@ -982,7 +986,7 @@ body.concept {
     }
 }
 
-/* ================ cakes ================ */
+/* ================ ケーキ一覧 ================ */
 body.cake {
     main {
         text-align: center;
@@ -1016,7 +1020,7 @@ body.cake {
     }
 }
 
-/* ================ whole ================ */
+/* ================ ホールケーキ一覧 ================ */
 body.whole {
     main {
         text-align: center;
@@ -1051,7 +1055,7 @@ body.whole {
 }
 
 
-/* ================ baked ================ */
+/* ================ 焼き菓子一覧 ================ */
 body.baked {
     main {
         text-align: center;
@@ -1085,7 +1089,7 @@ body.baked {
     }
 }
 
-/* ================ gift ================ */
+/* ================ ギフト ================ */
 body.gift {
     main {
         text-align: center;
@@ -1172,7 +1176,7 @@ body.gift {
     }
 }
 
-/* ================ info ================ */
+/* ================ 店舗情報 ================ */
 body.info {
     main {
         text-align: center;
@@ -1236,6 +1240,178 @@ body.info {
                     display: block;
                 }
 
+            }
+        }
+    }
+}
+
+/* ================ ご予約案内 ================ */
+body.reserve {
+    main {
+        text-align: center;
+
+        .reserve {
+            padding-top: 56px;
+
+            #bakemall,
+            #tel {
+                scroll-margin-top: 140px;
+            }
+
+            .container {
+                .reserve-title {
+                    position: relative;
+                    background-image: url("../img/top/reservation.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    margin-bottom: 60px;
+                    height: clamp(50px, 7vw, 72px);
+                    background-size: contain;
+
+                    h2 {
+                        position: absolute;
+                        left: 50%;
+                        bottom: 55%;
+                        transform: translate(-50%, 150%);
+                    }
+                }
+
+                .tabmenu {
+                    display: flex;
+                    justify-content: center;
+                    gap: 80px;
+                    margin-top: 48px;
+
+                    a {
+                        font-weight: bold;
+                        font-size: 20px;
+                        border-bottom: 1px solid var(--btn);
+                        padding: 0 8px 12px 8px;
+
+                        i {
+                            margin-left: 12px;
+                            color: var(--btn);
+                            transition: transform 0.3s ease;
+
+                            &:hover {
+                                transform: translateY(2px);
+                            }
+                        }
+
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+
+                .reserve-box {
+                    max-width: 1040px;
+                    padding: 72px;
+                    margin: 80px auto;
+                    border: solid 1px var(--btn);
+                    border-radius: 50px;
+
+                    h3 {
+                        font-weight: bold;
+                        font-size: 20px;
+                        position: relative;
+                        display: inline-block;
+                        padding-bottom: 16px;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 50%;
+                            bottom: 0;
+                            transform: translateX(-50%);
+                            width: 40px;
+                            height: 3px;
+                            background-color: var(--btn);
+                        }
+                    }
+
+                    .text {
+                        margin: 24px 0 24px;
+
+                        .asterisk {
+                            font-size: 0.7em;
+                        }
+                    }
+
+                    .process {
+                        p {
+                            font-weight: bold;
+                            margin-bottom: 8px;
+                        }
+
+                        ol {
+                            list-style-type: decimal;
+                            list-style-position: inside;
+
+                            li {
+                                margin-bottom: 8px;
+                            }
+                        }
+                    }
+
+                    .bakemall-cta {
+                        margin-top: 48px;
+                        display: flex;
+                        justify-content: center;
+                        gap: 40px;
+                        white-space: nowrap;
+
+                        a {
+                            width: clamp(220px, 30vw, 420px);
+                            padding: 22px 20px;
+                            border-radius: 100px;
+                            background-color: var(--btn);
+                            color: var(--white);
+                            text-align: center;
+
+                            i {
+                                transition: transform 0.3s ease;
+                            }
+
+                            &:hover i {
+                                transform: translateX(6px);
+                            }
+                        }
+                    }
+
+                    .tel {
+                        font-weight: bold;
+                        font-size: 24px;
+                    }
+                }
+
+                .precautions {
+                    p {
+                        font-size: 20px;
+                    }
+
+                    ul {
+                        font-size: 0.8em;
+                        list-style-type: disc;
+                        list-style-position: inside;
+                        max-width: 700px;
+                        margin: 40px auto;
+                        text-align: left;
+                    }
+                }
+
+                .links {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 20px;
+                    max-width: 800px;
+                    margin: 100px auto 0;
+
+                    a {
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
+                }
             }
         }
     }
@@ -1424,7 +1600,7 @@ body.info {
         main {
 
             .concept,
-            .reserve,
+            .reserve-top,
             .shopinfo {
                 text-align: center;
             }
@@ -1491,7 +1667,7 @@ body.info {
                 }
             }
 
-            .reserve {
+            .-top {
                 .container {
                     gap: 40px;
                     grid-template-columns: 1fr;
@@ -1510,7 +1686,7 @@ body.info {
                         }
                     }
 
-                    .reserve-title {
+                    .reserve-top-title {
                         position: relative;
                         background-position: center;
                         height: clamp(70px, 7vw, 80px);
@@ -1633,39 +1809,7 @@ body.info {
         }
     }
 
-    body.gift {
-        main {
-            .gift {
-                .container {
-                    .wrapping-card-list {
-                        gap: 20px;
-                    }
-                }
-            }
-        }
-    }
-
-    body.info {
-        main {
-            .info {
-                .container {
-                    table {
-                        width: 100%;
-                        font-size: 14px;
-                    }
-
-                    h2 {
-                        margin-top: 100px;
-                    }
-
-                    iframe {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-
+    /* ================ コンセプト================ */
     body.concept {
         main {
             #concept {
@@ -1722,6 +1866,42 @@ body.info {
             }
         }
     }
+
+    /* ================ ギフト ================ */
+    body.gift {
+        main {
+            .gift {
+                .container {
+                    .wrapping-card-list {
+                        gap: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* ================ 店舗情報 ================ */
+    body.info {
+        main {
+            .info {
+                .container {
+                    table {
+                        width: 100%;
+                        font-size: 14px;
+                    }
+
+                    h2 {
+                        margin-top: 100px;
+                    }
+
+                    iframe {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -1833,11 +2013,11 @@ body.info {
                 }
             }
 
-            .reserve {
+            .reserve-top {
                 .container {
                     gap: 1.5em;
 
-                    .reserve-title {
+                    .reserve-top-title {
                         margin-bottom: 7px;
                         height: 60px;
                     }
@@ -1977,7 +2157,7 @@ body.info {
         }
     }
 
-    /* ================ concept ================ */
+    /* ================ コンセプト ================ */
     body.concept {
         main {
             .concept-title {
@@ -2037,7 +2217,7 @@ body.info {
         }
     }
 
-    /* ================ cakes ================ */
+    /* ================ ケーキ一覧 ================ */
     body.cake {
         main {
             .cakes {
@@ -2057,6 +2237,7 @@ body.info {
         }
     }
 
+    /* ================ ホールケーキ一覧 ================ */
     body.whole {
         main {
             .whole {
@@ -2071,6 +2252,7 @@ body.info {
         }
     }
 
+    /* ================ ギフト ================ */
     body.gift {
         main {
             .gift {
@@ -2119,6 +2301,7 @@ body.info {
         }
     }
 
+    /* ================ 店舗情報 ================ */
     body.info {
         main {
             .info {
@@ -2154,6 +2337,75 @@ body.info {
                             h3 {
                                 font-size: 18px;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ================ ご予約案内 ================ */
+    body.reserve {
+        main {
+            .reserve {
+                .container {
+                    .tabmenu {
+                        gap: 18px;
+                        margin-top: 24px;
+
+                        a {
+                            text-align: left;
+                            font-size: 16px;
+                            white-space: nowrap;
+
+                            br {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .text {
+                        text-align: left;
+
+                        .asterisk {
+                            color: var(--btn);
+                        }
+                    }
+
+                    .reserve-box {
+                        padding: 32px 24px;
+                        margin: 40px auto;
+
+                        .process {
+                            ol {
+                                li {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+
+                    .precautions {
+                        margin: 0 24px;
+
+                        ul {
+                            margin: 16px 0;
+                        }
+                    }
+
+                    .links {
+                        grid-template-columns: 1fr;
+                        margin-top: 80px;
+                        flex-direction: column;
+                        align-items: stretch;
+                        gap: 16px;
+
+                        a {
+                            width: 100%;
+                            max-width: none;
+                            padding: 18px 20px;
+                            justify-content: center;
+                            font-size: 14px;
                         }
                     }
                 }
