@@ -13,14 +13,11 @@
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
     <link rel="manifest" href="img/favicon/manifest.webmanifest">
     <!-- Google Fonts の読み込み-->
-    <link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/2abdc1e923.js" crossorigin="anonymous"></script>
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <!-- inview -->
@@ -38,7 +35,7 @@
 
             <h1>
                 <a href="index.html" class="logo">
-                    <img src="img/top/logo.svg" alt="">
+                    <img src="img/top/logo.svg" alt="Pâtisserie Nérinのロゴ">
                 </a>
             </h1>
 
@@ -92,7 +89,7 @@
     <main>
 
         <section class="sub_main_img">
-            <img src="img/whole/whole_main_img.jpg" alt="">
+            <img src="img/whole/whole_main_img.jpg" alt="苺がのったホールケーキの画像">
         </section>
 
         <!-- =========================== ホールケーキ一覧 =========================== -->
@@ -112,7 +109,7 @@
                 <div class="card-list">
 
                     <div class="card">
-                        <img class="show fade-only" src="img/whole/fraise.jpg" alt="">
+                        <img class="show fade-only" src="img/whole/fraise.jpg" alt="苺のホールケーキの画像">
                         <div class="card-text">
                             <h3>フレーズ・フレーズ</h3>
                             <p class="description">国産いちごと軽いシャンティクリームを重ねた、定番のケーキ。</p>
@@ -122,7 +119,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="show fade-only" src="img/whole/chocolat.jpg" alt="">
+                        <img class="show fade-only" src="img/whole/chocolat.jpg" alt="チョコレートでコーティングされたホールケーキの画像">
                         <div class="card-text">
                             <h3>ショコラ・ノワール</h3>
                             <p class="description">ビターチョコレートムースを、艶やかなグラサージュで包んだケーキ。</p>
@@ -132,7 +129,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="show fade-only" src="img/whole/tarte_pstache.jpg" alt="">
+                        <img class="show fade-only" src="img/whole/tarte_pstache.jpg" alt="苺とピスタチオのタルトの画像">
                         <div class="card-text">
                             <h3>タルト・ピスターシュ</h3>
                             <p class="description">カスタードクリームと苺、ピスタチオの香ばしさを添えた華やかなタルト。</p>
@@ -142,7 +139,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="show fade-only" src="img/whole/montblanc.jpg" alt="">
+                        <img class="show fade-only" src="img/whole/montblanc.jpg" alt="マロンクリームのホールケーキの画像">
                         <div class="card-text">
                             <h3>モンブラン・クラシック</h3>
                             <p class="description">マロンクリームを幾重にも絞り、栗の豊かな香りを贅沢に楽しめる上品なモンブラン。</p>
@@ -152,7 +149,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="show fade-only" src="img/whole/blueberry.jpg" alt="">
+                        <img class="show fade-only" src="img/whole/blueberry.jpg" alt="ブルーベリーがたくさんのったタルトの画像">
                         <div class="card-text">
                             <h3>ブルーベリータルト</h3>
                             <p class="description">ブルーベリーをふんだんにのせ、爽やかな酸味とやさしい甘さのタルト。</p>
@@ -162,7 +159,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="show fade-only" src="img/whole/fruit_tart.jpg" alt="">
+                        <img class="show fade-only" src="img/whole/fruit_tart.jpg" alt="フルーツタルトの画像">
                         <div class="card-text">
                             <h3>フルーツタルト</h3>
                             <p class="description">ベリーとりんごをたっぷり飾り、カスタードを合わせた華やかなフルーツタルト。</p>
@@ -188,7 +185,7 @@
         <div class="white-curve"></div>
         <div class="footer-content">
             <div class="logo">
-                <a href=""><img src="img/top/logo.svg" alt="Pâtisserie Nérin"></a>
+                <a href="index.html"><img src="img/top/logo.svg" alt="Pâtisserie Nérinのロゴ"></a>
                 <p class="copy">&copy; 2026 Pâtisserie Nérin. All rights reserved.</p>
                 <p class="notes">※本サイトはポートフォリオ用に自主制作した架空のWebサイトです。</p>
             </div>
@@ -202,40 +199,27 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+        //　inview
+        $(function () {
+            $(".show").on("inview", function (event, isInview) {
+                if (isInview) {
+                    $(this).addClass("fade-in");
+                }
+            });
+        });
+        // ハンバーガーメニュー
+        document.querySelectorAll('.hamburger-menu').forEach(function (menu) {
+            menu.addEventListener('click', function () {
+                this.classList.toggle('active');
+                const navMenu = this.parentElement.querySelector('.sp-nav');
+                if (navMenu) {
+                    navMenu.classList.toggle('active');
+                }
+            });
+        });
+    </script>
 </body>
-<script>
-    //　swiper
-    const swiper = new Swiper('.swiper', {
-        loop: true,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-        speed: 1000,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
-    });
-    //　inview
-    $(function () {
-        $(".show").on("inview", function (event, isInview) {
-            if (isInview) {
-                $(this).addClass("fade-in");
-            }
-        });
-    });
-    // ハンバーガーメニュー
-    document.querySelectorAll('.hamburger-menu').forEach(function (menu) {
-        menu.addEventListener('click', function () {
-            this.classList.toggle('active');
-            const navMenu = this.parentElement.querySelector('.sp-nav');
-            if (navMenu) {
-                navMenu.classList.toggle('active');
-            }
-            document.body.classList.toggle('drawer-open');
-        });
-    });
-</script>
 
 </html>

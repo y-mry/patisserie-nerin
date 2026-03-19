@@ -13,14 +13,11 @@
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
     <link rel="manifest" href="img/favicon/manifest.webmanifest">
     <!-- Google Fonts の読み込み-->
-    <link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/2abdc1e923.js" crossorigin="anonymous"></script>
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <!-- inview -->
@@ -38,7 +35,7 @@
 
             <h1>
                 <a href="index.html" class="logo">
-                    <img src="img/top/logo.svg" alt="">
+                    <img src="img/top/logo.svg" alt="Pâtisserie Nérinのロゴ">
                 </a>
             </h1>
 
@@ -92,7 +89,7 @@
     <main>
 
         <section class="sub_main_img">
-            <img src="img/concept/concept_main_img.jpg" alt="">
+            <img src="img/concept/concept_main_img.jpg" alt="クリームを絞る画像">
         </section>
 
         <!-- =========================== コンセプト =========================== -->
@@ -104,7 +101,7 @@
         <section id="concept" class="concept">
             <div class="container">
                 <div class="image">
-                    <img class="show from-right" src="img/concept/aboutas.jpg" alt="">
+                    <img class="show from-right" src="img/concept/aboutas.jpg" alt="ショーケースにたくさんのケーキが並ぶ画像">
                 </div>
                 <div class="text">
                     <p class="lead">毎日の中に、<br>少しだけ特別なひとときを。</p>
@@ -118,14 +115,14 @@
                 </div>
             </div>
             <div class="photo">
-                <img src="img/concept/flesh.jpg" alt="">
-                <img src="img/concept/flour.jpg" alt="">
-                <img src="img/concept/handmade.jpg" alt="">
-                <img src="img/concept/details.jpg" alt="">
+                <img src="img/concept/flesh.jpg" alt="新鮮な苺の画像">
+                <img src="img/concept/flour.jpg" alt="シェフが小麦粉を振るう画像">
+                <img src="img/concept/handmade.jpg" alt="タルトにブルーベリーを入れる画像">
+                <img src="img/concept/details.jpg" alt="クリームを丁寧に絞る画像">
             </div>
             <div class="container reverse">
                 <div class="image">
-                    <img class="show from-left" src="img/concept/material.jpg" alt="">
+                    <img class="show from-left" src="img/concept/material.jpg" alt="シェフがケーキにアーモンドを振りかける画像">
                 </div>
                 <div class="text">
                     <p class="lead">季節の素材を大切に。</p>
@@ -138,7 +135,7 @@
             </div>
             <div class="container">
                 <div class="image">
-                    <img class="show from-right" src="img/concept/chef.jpg" alt="">
+                    <img class="show from-right" src="img/concept/chef.jpg" alt="シェフがタルト生地を作るモノクロの画像">
                 </div>
                 <div class="text">
                     <p class="lead">ひとつひとつ丁寧に、<br>シェフの手で。</p>
@@ -160,7 +157,7 @@
         <div class="white-curve"></div>
         <div class="footer-content">
             <div class="logo">
-                <a href=""><img src="img/top/logo.svg" alt="Pâtisserie Nérin"></a>
+                <a href="index.html"><img src="img/top/logo.svg" alt="Pâtisserie Nérinのロゴ"></a>
                 <p class="copy">&copy; 2026 Pâtisserie Nérin. All rights reserved.</p>
                 <p class="notes">※本サイトはポートフォリオ用に自主制作した架空のWebサイトです。</p>
             </div>
@@ -174,40 +171,27 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+        //　inview
+        $(function () {
+            $(".show").on("inview", function (event, isInview) {
+                if (isInview) {
+                    $(this).addClass("fade-in");
+                }
+            });
+        });
+        // ハンバーガーメニュー
+        document.querySelectorAll('.hamburger-menu').forEach(function (menu) {
+            menu.addEventListener('click', function () {
+                this.classList.toggle('active');
+                const navMenu = this.parentElement.querySelector('.sp-nav');
+                if (navMenu) {
+                    navMenu.classList.toggle('active');
+                }
+            });
+        });
+    </script>
 </body>
-<script>
-    //　swiper
-    const swiper = new Swiper('.swiper', {
-        loop: true,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-        speed: 1000,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
-    });
-    //　inview
-    $(function () {
-        $(".show").on("inview", function (event, isInview) {
-            if (isInview) {
-                $(this).addClass("fade-in");
-            }
-        });
-    });
-    // ハンバーガーメニュー
-    document.querySelectorAll('.hamburger-menu').forEach(function (menu) {
-        menu.addEventListener('click', function () {
-            this.classList.toggle('active');
-            const navMenu = this.parentElement.querySelector('.sp-nav');
-            if (navMenu) {
-                navMenu.classList.toggle('active');
-            }
-            document.body.classList.toggle('drawer-open');
-        });
-    });
-</script>
 
 </html>

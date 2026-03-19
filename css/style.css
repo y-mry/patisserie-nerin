@@ -1667,7 +1667,7 @@ body.reserve {
                 }
             }
 
-            .-top {
+            .reserve-top {
                 .container {
                     gap: 40px;
                     grid-template-columns: 1fr;

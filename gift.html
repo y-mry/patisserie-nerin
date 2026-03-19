@@ -13,14 +13,11 @@
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
     <link rel="manifest" href="img/favicon/manifest.webmanifest">
     <!-- Google Fonts の読み込み-->
-    <link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/2abdc1e923.js" crossorigin="anonymous"></script>
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <!-- inview -->
@@ -38,7 +35,7 @@
 
             <h1>
                 <a href="index.html" class="logo">
-                    <img src="img/top/logo.svg" alt="">
+                    <img src="img/top/logo.svg" alt="Pâtisserie Nérinのロゴ">
                 </a>
             </h1>
 
@@ -92,7 +89,7 @@
     <main>
 
         <section class="sub_main_img">
-            <img src="img/gift/gift_main_img.jpg" alt="">
+            <img src="img/gift/gift_main_img.jpg" alt="フロランタン、バターサンド、苺ジャムクッキーが入ったボックスの画像">
         </section>
 
         <!-- =========================== ギフト =========================== -->
@@ -111,7 +108,8 @@
                 <div class="card-list">
 
                     <div class="card">
-                        <img class="show fade-only" src="img/gift/giftbox_S.jpg" alt="">
+                        <img class="show fade-only" src="img/gift/giftbox_S.jpg"
+                            alt="フロランタン、バターサンド、苺ジャムクッキーが入ったボックスの画像">
                         <div class="card-text">
                             <h3>焼き菓子ギフトボックス　S</h3>
                             <p class="description">焼き菓子３種類詰め合わせ</p>
@@ -119,7 +117,8 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="show fade-only" src="img/gift/giftbox_M.jpg" alt="">
+                        <img class="show fade-only" src="img/gift/giftbox_M.jpg"
+                            alt="フロランタン、バターサンド、苺ジャムクッキー、フィナンシェが入ったボックスの画像">
                         <div class="card-text">
                             <h3>焼き菓子ギフトボックス　M</h3>
                             <p class="description">焼き菓子４〜5種類詰め合わせ</p>
@@ -127,7 +126,8 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="show fade-only" src="img/gift/giftbox_L.jpg" alt="">
+                        <img class="show fade-only" src="img/gift/giftbox_L.jpg"
+                            alt="マドレーヌ、フィナンシェ、スノーボール、フロランタン、バターサンド、苺ジャムクッキー、チョコチップクッキーが入ったボックスの画像">
                         <div class="card-text">
                             <h3>焼き菓子ギフトボックス　L</h3>
                             <p class="description">焼き菓子８種類以上を詰め合わせ</p>
@@ -142,14 +142,14 @@
                 <div class="wrapping-card-list">
 
                     <div class="card">
-                        <img class="show fade-only" src="img/gift/giftwrapping.jpg" alt="">
+                        <img class="show fade-only" src="img/gift/giftwrapping.jpg" alt="白いリボンでラッピングされたボックスの画像">
                         <div class="card-text">
                             <h3>ギフトラッピング</h3>
                             <p class="description">通常のギフトラッピングはこちらになります。</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img class="show fade-only" src="img/gift/noshi.jpg" alt="">
+                        <img class="show fade-only" src="img/gift/noshi.jpg" alt="御祝と書かれた熨斗で包まれたボックスの画像">
                         <div class="card-text">
                             <h3>熨斗</h3>
                             <p class="description">季節のご挨拶、御祝、御法要に合わせてご用意いたします。</p>
@@ -169,7 +169,7 @@
                         <h3>お電話のご注文</h3>
                         <p>お急ぎの方は事前にご予約をいただくことも可能です。</p>
                         <p>ご希望やご用途に合わせて焼き菓子の内容をお任せいただくことも可能です。</p>
-                        <a href="tel">00-0000-0000</a>
+                        <a href="tel:00-0000-0000">00-0000-0000</a>
                     </div>
                 </div>
 
@@ -185,7 +185,7 @@
         <div class="white-curve"></div>
         <div class="footer-content">
             <div class="logo">
-                <a href=""><img src="img/top/logo.svg" alt="Pâtisserie Nérin"></a>
+                <a href="index.html"><img src="img/top/logo.svg" alt="Pâtisserie Nérinのロゴ"></a>
                 <p class="copy">&copy; 2026 Pâtisserie Nérin. All rights reserved.</p>
                 <p class="notes">※本サイトはポートフォリオ用に自主制作した架空のWebサイトです。</p>
             </div>
@@ -199,40 +199,27 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+        //　inview
+        $(function () {
+            $(".show").on("inview", function (event, isInview) {
+                if (isInview) {
+                    $(this).addClass("fade-in");
+                }
+            });
+        });
+        // ハンバーガーメニュー
+        document.querySelectorAll('.hamburger-menu').forEach(function (menu) {
+            menu.addEventListener('click', function () {
+                this.classList.toggle('active');
+                const navMenu = this.parentElement.querySelector('.sp-nav');
+                if (navMenu) {
+                    navMenu.classList.toggle('active');
+                }
+            });
+        });
+    </script>
 </body>
-<script>
-    //　swiper
-    const swiper = new Swiper('.swiper', {
-        loop: true,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-        speed: 1000,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
-    });
-    //　inview
-    $(function () {
-        $(".show").on("inview", function (event, isInview) {
-            if (isInview) {
-                $(this).addClass("fade-in");
-            }
-        });
-    });
-    // ハンバーガーメニュー
-    document.querySelectorAll('.hamburger-menu').forEach(function (menu) {
-        menu.addEventListener('click', function () {
-            this.classList.toggle('active');
-            const navMenu = this.parentElement.querySelector('.sp-nav');
-            if (navMenu) {
-                navMenu.classList.toggle('active');
-            }
-            document.body.classList.toggle('drawer-open');
-        });
-    });
-</script>
 
 </html>
