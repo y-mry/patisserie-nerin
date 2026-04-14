@@ -1928,7 +1928,7 @@ body.reserve {
 
 @media (width <=600px) {
 
-    body {
+    body,body.subpage {
         .container {
             padding: 0 clamp(16px, 5vw, 120px);
         }
@@ -1973,6 +1973,7 @@ body.reserve {
             h1 {
                 font-size: 22px;
             }
+
             .main_img {
                 height: 85vh;
 
@@ -2137,12 +2138,24 @@ body.reserve {
 
     /* ================ 下層ページ共通 ================ */
     body.subpage {
+        header {
+            .menu-all {
+                .header-logo {
+                    img {
+                        height: 18px;
+                    }
+                }
+            }
+        }
         main {
             .sub_main_img {
                 height: 160px;
             }
 
             .container {
+                .sub-menu {
+                    font-size: 22px;
+                }
                 .card-list {
                     .card {
                         .card-text {
@@ -2170,10 +2183,6 @@ body.reserve {
                         justify-content: center;
                         font-size: 14px;
                     }
-                }
-
-                h1 {
-                    font-size: 22px;
                 }
             }
         }
