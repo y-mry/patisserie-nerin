@@ -1975,7 +1975,7 @@ body.reserve {
             }
 
             .main_img {
-                height: 85vh;
+                height: 100vh;
 
                 .scroll {
                     display: none;
